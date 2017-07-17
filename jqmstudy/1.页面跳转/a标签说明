@@ -1,0 +1,30 @@
+导航：页面导航都用a标签实现
+四种超链接类型：
+1）内部链接：连接到同一个文档另一个页面
+2）外部链接：链接到另一个jqm文档中的页面
+**如果你不想采用AJAX的方式加载页面，而想以原生的页面加载方式打开一个链接页面，
+只需要在打开的链接上添加属性 rel=”external”属性
+注意：
+*目标必须是一个jqm文档
+*目标必须与当前页面在同一域名下
+*目标页面必须只有一个page
+*目标页面不要指定id
+*如果使用target属性_blank，则打开的页面就不再属于“外部链接”
+3）绝对外部链接：链接到非jqm的绝对外部链接
+方式1：使用绝对外部链接方式：data-rel="external"
+方式2：指定target或者链接到不同域名文档
+方式3：data-ajax="false"
+*域名不同
+*页面不是jqm页面
+*使用target属性_blank跳转而来的
+4)移动应用专有链接：URI机制，拨打电话和发短信等
+拨电话：
+<a href="tel:+8618002299334">Call Me</a>
+发邮件：
+<a href="mailto:info@mobile.com">Mail us</a>
+<a href="mailto:info@mobile.com?subject=Contactus">Mail us</a>
+<a href="mailto:info@mobile.com?subject=Contactus&body=this isbody">Mail us</a>
+发短信：
+<a href="sms://">send an message</a>
+<a href="sms://?body=hello">send an message</a>
+<a href="sms://+8618033445566?body=hello">send an message</a>

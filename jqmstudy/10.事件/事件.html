@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title></title>
+  <link rel="stylesheet" href="files/jquery.mobile-1.4.5.min.css"/>
+  <script src="files/jquery-1.7.2.min.js"></script>
+  <script src="files/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+  <div data-role="page">
+    <div data-role="header">
+      <h1>my head</h1>
+    </div>
+    <div data-role="content">
+      <p id="p1">点击我进行隐藏</p>
+      <p id="p2">长按我进行隐藏</p>
+      <p id="p3">水平向左滑动我进行隐藏</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+      <p>滑动我呀</p>
+    </div>
+    <div data-role="footer">
+      <h1>my foot</h1>
+    </div>
+  </div>
+  <script>
+    //事件触发
+    //1.当页面已经初始化并且完成增强时触发。
+    $(document).on("pageinit",function(){
+      alert("hello");
+      //2.当用户敲击某元素时触发
+      $("#p1").on("tap",function(){
+        $(this).hide();
+      });
+      //3.当元素敲击某元素并保持一秒时触发。
+      $("#p2").on("taphold",function(){
+        $(this).hide();
+      });
+      //4.当用户在元素上水平滑动时触发
+      $("#p3").on("swipeleft",function(){
+        $(this).hide();
+      });
+      //4.scrollstart	当用户开始滚动页面时触发。
+      //  scrollstop	当用户停止滚动页面时触发。
+      /*
+      $(document).on("scrollstart",function(){
+
+      });*/
+
+    });
+  </script>
+</body>
+</html>
